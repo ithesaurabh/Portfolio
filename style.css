@@ -1,0 +1,179 @@
+@font-face {
+    font-family: MMD;
+    src: url(res/MajorMonoDisplay-Regular.ttf);
+}
+@font-face {
+    font-family: Mont;
+    src: url(res/Montserrat-Regular.ttf);
+}
+@font-face {
+    font-family: HeroSection;
+    src: url(res/Staatliches-Regular.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+}
+#main{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+#navbar{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+}
+#nav-up{
+    height: 6vh;    
+    width: 30%;
+    margin-top: -30px;
+    background-color: #00060A;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#nav-up h1{
+    margin-top: 30px;
+    padding: 0 3px;
+    font-size: 15px;
+    color: #1CE8FF;
+    font-family: MMD;
+}
+#nav-down{
+    height: 40px;
+    width: 30%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center; 
+}
+#nav-down h3{
+    font-family: Mont;
+    font-size: 15px;
+    color: white;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+#hero-section{
+    height: 100vh;
+    width: 100%;
+}
+#hero-section img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    object-fit: cover;
+    user-select: none;
+}
+#hero-section-text{
+    margin-top: 300px;
+    margin-left: 100px;
+    color: #ECECEC;
+}
+#hero-section-text p{
+    font-family: Mont;
+    font-size: 80px;
+    font-weight: 900;
+}
+#hero-section-text h2{
+    width: 50%;
+    height: fit-content;
+    font-family: HeroSection;
+    font-size: 200px;
+    line-height: 80%;
+    font-weight: 900;
+}
+.makeCol{
+    width: 50%;
+    display: flex;
+    justify-content: start;
+    gap: 30px;
+    align-items: center;
+}
+.primaryButton{
+    height: 40px;
+    width: 200px;
+    font-family: Mont;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    color: black;
+    font-size: 20px;
+    font-weight: 800;
+    background-color: #1CE8FF;
+    border : 1px solid #1CE8FF;
+    transition: all ease-in 0.3s; 
+}
+#collab{
+    background-color: black;
+    color: #1CE8FF;
+}
+#collab:hover{
+    background-color: #1ce8ff80;
+    color: black;
+}
+#hireme:hover{
+    color: white;
+    background-color: #1ce8ff80;
+}
+
+@media (max-width : 600px) {
+    #nav-up{
+        height: 6vh;    
+        width: 60%;
+        margin-top: -30px;
+        background-color: #ffffff;
+        border-radius: 15px;
+    }
+    #nav-down{
+        height: 40px;
+        width: 60%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center; 
+    }
+    #nav-down h3{
+        font-family: Mont;
+        font-size: 10px;
+        color: white;
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+    #hero-section-text{
+        margin-top: 400px;
+        margin-left: 30px;
+        color: #ECECEC;
+    }
+    #hero-section-text p{
+        font-family: Mont;
+        font-size: 40px;
+    }
+    #hero-section-text h2{
+        width: fit-content;
+        font-size: 80px;
+    }
+    .makeCol{
+        margin-top: 5px;
+        width: 100%;
+        justify-content: start;
+        gap : 10px;
+    }
+    .primaryButton{
+        height: 40px;
+        width: 150px;
+        font-size: 15px;
+    }
+}
