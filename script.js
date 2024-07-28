@@ -11,7 +11,7 @@ document.addEventListener("mousemove", (dets)=>{
 var crsrRToBeScaledFor = document.querySelectorAll(".crsrRToBeScaledFor");
 crsrRToBeScaledFor.forEach(element => {
     element.addEventListener("mouseenter",()=>{
-        crsr.style.backgroundColor = "yellow";
+        crsr.style.backgroundColor = "red";
         crsr.style.borderRadius = "20px";
     })  
     element.addEventListener("mouseleave",()=>{
@@ -20,6 +20,34 @@ crsrRToBeScaledFor.forEach(element => {
         
     })  
 });
+
+gsap.to("#navbar", {
+    // height: 30,
+    justifyContent: "space-between",
+    backgroundColor: "black",
+    flexDirection: "row",
+     scrollTrigger : {
+         trigger : "#navbar",
+         scroller : "body",
+         // markers : true,
+         start : "top -15%",
+         end : "top -16%",
+         scrub : 1
+     }
+ })
+gsap.to("#nav-up", {
+    width: "10%",
+    backgroundColor: "transparent",
+    justifyContent: "center",
+    flexDirection: "row",
+     scrollTrigger : {
+         trigger : "#nav-up",
+         scroller : "body",
+         start : "top -15%",
+         end : "top -16%",
+         scrub : 1
+     }
+ })
 var headings = document.querySelectorAll(".heading h2");
 headings.forEach((heading) => {
     gsap.from(heading, {
@@ -106,16 +134,16 @@ function gotoLinkedIn(){
     window.location.href = "https://www.linkedin.com/in/communicatewithsaurabh/";
 }
 function gotoGitHub(){
-    window.location.href = "https://www.linkedin.com/in/communicatewithsaurabh/";
+    window.location.href = "https://github.com/ithesaurabh";
 }
 function gotoInstagram(){
-    window.location.href = "https://www.linkedin.com/in/communicatewithsaurabh/";
+    window.location.href = "https://www.instagram.com/krmada.apk/";
 }
 function gotoX(){
-    window.location.href = "https://www.linkedin.com/in/communicatewithsaurabh/";
+    window.location.href = "https://x.com/SaurabhKJha_Dev";
 }
 function gotoLeetCode(){
-    window.location.href = "https://www.linkedin.com/in/communicatewithsaurabh/";
+    window.location.href = "https://leetcode.com/u/codewithskjha/";
 }
 function gotoHack4Bengal(){
     window.location.href = "https://www.hack4bengal.tech/";
@@ -164,33 +192,56 @@ Best regards,
     window.location.href = mailtoLink;
 }
 function project1(){
-    window.location.href = "https://www.linkedin.com/in/communicatewithsaurabh/";
+    window.location.href = "https://github.com/ithesaurabh/Fusion-PDF";
 }
 function project2(){
-    window.location.href = "https://www.linkedin.com/in/communicatewithsaurabh/";
+    window.location.href = "https://github.com/ithesaurabh/bwuconnect2";
 }
 function project3(){
-    window.location.href = "https://www.linkedin.com/in/communicatewithsaurabh/";
+    window.location.href = "https://github.com/ithesaurabh/WhatsappExtend";
 }
 function blog1(){
-    window.location.href = "https://www.linkedin.com/in/communicatewithsaurabh/";
+    window.location.href = "https://www.linkedin.com/pulse/my-100daysofdsa-journey-saurabh-kumar-jha-0dnlc/";
 }
 function blog2(){
-    window.location.href = "https://www.linkedin.com/in/communicatewithsaurabh/";
+    // window.location.href = "https://www.linkedin.com/in/communicatewithsaurabh/";
+    alert("Currently cooking🧑🏻‍🍳.Will be updated shortly");
 }
 function downloadResume(){
-    window.location.href = "https://www.linkedin.com/in/communicatewithsaurabh/";
+    window.location.href = "https://drive.google.com/file/d/1ky-ktYh8TEzw82Tc8G5kCalhPX1KNJT9/view?usp=sharing";
 }
 function moment1(){
-    window.location.href = "https://www.linkedin.com/in/communicatewithsaurabh/";
+    window.location.href = "https://www.instagram.com/p/C85ALBoSnbg/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==";
 }
 function moment2(){
-    window.location.href = "https://www.linkedin.com/in/communicatewithsaurabh/";
+    window.location.href = "https://www.instagram.com/p/C7oQjo8SKLM/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==";
 }
 function scrollToSection(sectionId) {
     const section = document.getElementById(sectionId);
     section.scrollIntoView({ behavior: 'smooth' });
 }
+
+//Quotes 
+
+let quotesArray = [
+    "The only way to achieve the impossible is to believe it is possible.",
+    "Success is not final, failure is not fatal: It is the courage to continue.",
+    "The journey of a thousand miles begins with one step.",
+    "You miss 100% of the shots you don’t take.",
+    "Do what you can, with what you have, where you are.",
+    "The only limit to our realization of tomorrow is our doubts of today.",
+    "Don’t watch the clock; do what it does. Keep going.",
+    "Hardships often prepare ordinary people for an extraordinary destiny.",
+    "The best way to predict the future is to create it.",
+    "Dream big and dare to fail"
+];
+let max = 10;
+let randomNumber = Math.floor(Math.random() * max);
+
+let quote = document.getElementById('thisIsQuote');
+quote.innerHTML = quotesArray[randomNumber];
+// console.log(randomNumber);
+
 
 
 

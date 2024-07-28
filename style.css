@@ -313,7 +313,6 @@ body {
   width: 25%;
   display: flex;
   justify-content: center;
-  align-items: center;
   flex-direction: column;
   border-radius: 40px;
   border: 1px solid #1ce8ff;
@@ -335,19 +334,24 @@ body {
   border: 1px solid #1ce8ff;
 }
 .projectContainer h4 {
-  width: 60%;
-  font-size: 50px;
+  width: 100%;
+  font-size: 45px;
+  padding-left: 3%;
+  padding-right: 3%;
   text-transform: uppercase;
   text-align: center;
   font-family: MontB;
   -webkit-text-stroke: 0.8px #1ce8ff;
 }
-.projectContainer h5 {
-  position: absolute;
-  top: 85%;
+.projectContainer h5 {  
+  padding-left: 3%;
+  padding-right: 3%;
+  padding-top: 10px;
   font-size: 20px;
+  text-align: center;
   font-family: Mont;
-  color: white;
+  color: #1ce8ff;
+  z-index: 1;
 }
 .viewMoreBtnClass {
   height: 75%;
@@ -400,7 +404,10 @@ body {
   border-radius: 50%;
   transition: all cubic-bezier(0, 1.74, 0.3, 1.77) 0.5s;
 }
-.ts h3 {
+.ts img {
+  height: 50%;
+  width: 50%;
+  object-fit: contain;
   position: absolute;
 }
 .ts:hover {
@@ -465,6 +472,9 @@ body {
   border-radius: 30px;
   background-color: black;
   transition: all ease-in 0.15s;
+}
+#blogImage1{
+  background-image: url(https://media.licdn.com/dms/image/D5612AQH4-pdViQF7GA/article-cover_image-shrink_720_1280/0/1720898154390?e=1727913600&v=beta&t=DYhYo7MnIWDMWvHRs_CBChR9sthHkNHb6N0-FPMYirY);
 }
 .blogImage:hover {
   scale: 1.01;
@@ -533,6 +543,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  font-size: 33px;
 }
 #momentsRow1{
   height: 90%;                  
