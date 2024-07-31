@@ -236,7 +236,7 @@ let quotesArray = [
     "The best way to predict the future is to create it.",
     "Dream big and dare to fail"
 ];
-let max = 10;
+let max = 6;
 let randomNumber = Math.floor(Math.random() * max);
 
 let quote = document.getElementById('thisIsQuote');
