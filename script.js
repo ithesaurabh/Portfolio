@@ -21,33 +21,38 @@ crsrRToBeScaledFor.forEach(element => {
     })  
 });
 
-gsap.to("#navbar", {
-    // height: 30,
-    justifyContent: "space-between",
-    backgroundColor: "black",
-    flexDirection: "row",
-     scrollTrigger : {
-         trigger : "#navbar",
-         scroller : "body",
-         // markers : true,
-         start : "top -15%",
-         end : "top -16%",
-         scrub : 1
-     }
- })
-gsap.to("#nav-up", {
-    width: "10%",
-    backgroundColor: "transparent",
-    justifyContent: "center",
-    flexDirection: "row",
-     scrollTrigger : {
-         trigger : "#nav-up",
-         scroller : "body",
-         start : "top -15%",
-         end : "top -16%",
-         scrub : 1
-     }
- })
+function isMobileDevice() {
+    return window.matchMedia("(max-width: 767px)").matches;
+}
+if(!isMobileDevice){
+    gsap.to("#navbar", {
+        // height: 30,
+        justifyContent: "space-between",
+        backgroundColor: "black",
+        flexDirection: "row",
+         scrollTrigger : {
+             trigger : "#navbar",
+             scroller : "body",
+             // markers : true,
+             start : "top -15%",
+             end : "top -16%",
+             scrub : 1
+         }
+     })
+    gsap.to("#nav-up", {
+        width: "10%",
+        backgroundColor: "transparent",
+        justifyContent: "center",
+        flexDirection: "row",
+         scrollTrigger : {
+             trigger : "#nav-up",
+             scroller : "body",
+             start : "top -15%",
+             end : "top -16%",
+             scrub : 1
+         }
+     })
+}
 var headings = document.querySelectorAll(".heading h2");
 headings.forEach((heading) => {
     gsap.from(heading, {
