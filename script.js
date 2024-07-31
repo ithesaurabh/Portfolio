@@ -229,14 +229,10 @@ function scrollToSection(sectionId) {
 //Quotes 
 
 let quotesArray = [
-    "The only way to achieve the impossible is to believe it is possible.",
-    "Success is not final, failure is not fatal: It is the courage to continue.",
     "The journey of a thousand miles begins with one step.",
     "You miss 100% of the shots you don’t take.",
     "Do what you can, with what you have, where you are.",
-    "The only limit to our realization of tomorrow is our doubts of today.",
     "Don’t watch the clock; do what it does. Keep going.",
-    "Hardships often prepare ordinary people for an extraordinary destiny.",
     "The best way to predict the future is to create it.",
     "Dream big and dare to fail"
 ];
