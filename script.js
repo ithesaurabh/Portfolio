@@ -24,7 +24,8 @@ crsrRToBeScaledFor.forEach(element => {
 function isMobileDevice() {
     return window.matchMedia("(max-width: 767px)").matches;
 }
-if(!isMobileDevice){
+
+if(!isMobileDevice()){
     gsap.to("#navbar", {
         // height: 30,
         justifyContent: "space-between",
@@ -33,12 +34,11 @@ if(!isMobileDevice){
          scrollTrigger : {
              trigger : "#navbar",
              scroller : "body",
-             // markers : true,
              start : "top -15%",
              end : "top -16%",
              scrub : 1
          }
-     })
+     });
     gsap.to("#nav-up", {
         width: "10%",
         backgroundColor: "transparent",
@@ -51,7 +51,33 @@ if(!isMobileDevice){
              end : "top -16%",
              scrub : 1
          }
-     })
+     });
+}else{
+    gsap.to("#navbar", {
+        y:5,
+         scrollTrigger : {
+             trigger : "#navbar",
+             scroller : "body",
+             // markers : true,
+             start : "top -15%",
+             end : "top -16%",
+             scrub : 1
+         }
+     });
+     gsap.to("#nav-down", {
+        y : "2px",
+        width:"80%",
+        borderRadius: "30px",
+        border:"1px solid #1ce8ff",
+        backgroundColor:"#000000de",
+         scrollTrigger : {
+             trigger : "#nav-down",
+             scroller : "body",
+             start : "top -15%",
+             end : "top -16%",
+             scrub : 1
+         }
+    });
 }
 var headings = document.querySelectorAll(".heading h2");
 headings.forEach((heading) => {
